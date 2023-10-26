@@ -1,12 +1,12 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: AWS Serverless Spring Boot 2 API - com.sales.demo::SAC-231
+Description: AWS Serverless Spring Boot 2 API - com.sales.demo::SAC-24
 Globals:
   Api:
     EndpointConfiguration: REGIONAL
 
 Resources:
-  Sac231Function:
+  Sac24Function:
     Type: AWS::Serverless::Function
     Properties:
       Handler: com.sales.demo.StreamLambdaHandler::handleRequest
@@ -23,8 +23,8 @@ Resources:
             Method: any
 
 Outputs:
-  Sac231Api:
+  Sac24Api:
     Description: URL for application
     Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/ping'
     Export:
-      Name: Sac231Api
+      Name: Sac24Api
